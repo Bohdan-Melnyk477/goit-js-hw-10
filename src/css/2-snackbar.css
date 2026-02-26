@@ -1,0 +1,112 @@
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --text-color: #2e2f42;
+  --border-color: #808080;
+  --primary-color: #4e75ff;
+  --primary-hover: #6c8cff;
+  --bg-light: #f6f6fe;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--bg-light);
+}
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 360px;
+  margin: 80px auto;
+}
+
+.input-box-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+}
+
+.input-dalay {
+  height: 40px;
+  padding: 8px 12px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.input-dalay:hover {
+  border-color: #000;
+}
+
+.input-dalay:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(78, 117, 255, 0.4);
+}
+
+.fiel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.fiel legend {
+  font-size: 16px;
+  padding: 0 8px;
+  color: var(--text-color);
+}
+
+.fiel label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.radio-btn {
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.btn-apply {
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--primary-color);
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-apply:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-apply:active {
+  transform: translateY(0);
+}

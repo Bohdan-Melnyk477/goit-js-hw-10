@@ -1,0 +1,155 @@
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --primary-color: #2563eb;
+  --primary-hover: #4f46e5;
+  --text-main: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+  --bg-light: #f9fafb;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: #f3f4f6;
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+main {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-input {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.inpute {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-main);
+
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.inpute:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.flatpickr-day.today {
+  background-color: transparent !important;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color) !important;
+  border-radius: 6px;
+}
+
+.btn-click {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-hover)
+  );
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-click:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-click:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-click:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+.label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .timer {
+    gap: 20px;
+  }
+
+  .value {
+    font-size: 32px;
+  }
+
+  .box-input {
+    flex-direction: column;
+  }
+
+  .btn-click {
+    width: 100%;
+  }
+
+  .inpute {
+    width: 100%;
+  }
+}
